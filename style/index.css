@@ -1,3 +1,9 @@
+/* Estilizando pagina inicial */
+
+*{
+    font-family: Bruno ace, 'Times New Roman', Arial;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -6,11 +12,16 @@ body {
     background-size: cover;
 }
 
+
+#active {
+    display: flex;  /* Ativando o display flex ao clicar no botão */
+}
+
 main {
     width: 100vw;
     height: 100vh;
     background-color: rgba(22, 11, 88, 0.5);
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
@@ -28,7 +39,7 @@ main {
 
 .Div-cima h1{
     font-family: Bruno ace, 'Times New Roman', Arial;
-    font-size: 13vh;
+    font-size: 10vh;
     color: white;
 }
 
@@ -36,42 +47,129 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 60%;
     height: 10%;
 }
 
 .retangulo-1 {
-    width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 48%;
 }
 
 .retangulo-1 input {
     background: none;
-    border-radius: 30px;
-    height: 8vh;
-    width: 15vw;
-    border: solid 0.7vh;
+    border-radius: 80px;
+    height: 50px;
+    width: 60%;
+    border: solid 3px;
     border-color: #FFFFFF;
     color: #FFFFFF;
-    font-size: 5.5vh;
+    font-size: 25px;
     font-family: Bruno ace, 'Times New Roman', Arial;
+    cursor: pointer;
 }
 
 .retangulo-2 {
-    width: 30%;
+    width: 48%;
     display: flex;
-    justify-content: center;
+    justify-content: inherit;
 }
 
 .retangulo-2 input {
     background-color: #0B57A6 ;
     border: none;
-    border-radius: 30px;
-    height: 9vh;
-    width: 32vh;
+    border-radius: 80px;
+    height: 50px;
+    width: 60%;
     color: #FFFFFF;
-    font-size: 5vh;
+    font-size: 25px;
     font-family: Bruno ace, 'Times New Roman', Arial;
+    cursor: pointer;
+}
+
+/* Estilizando o popup de login */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    background: linear-gradient(90deg, #0B75A0 0%, rgba(112, 11, 160, 0.67) 100%);
+    border-radius: 50px;
+}
+
+img {
+    width: 40%; 
+    height: 80vh; 
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-login h1{
+    color: #FFFFFF;
+    font-family: Bruno ace, 'Times New Roman', Arial;
+    font-size: 5vh;
+    height: 20%;
+    padding: 20px;
+    margin-right: 41vh;
+}
+
+.inputs-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+}
+
+.inputs-text input {
+    background: none;
+    border: solid 3px;
+    border-color: #FFFFFF;
+    border-radius: 20px;
+    margin-left: 40px;
+    height: 10vh;
+    width: 40vw;
+}
+
+.inputs-text input::placeholder{
+    color: #FFFFFF;
+    font-size: 4vh;
+    padding: 30px;
+}
+
+.botao-login {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 30%;
+    width: 100%;
+}
+
+.botao-login input {
+    height: 10vh;
+    width: 40vw;
+    background: linear-gradient(90deg, #B455FF 0%, #476CFF 100%);
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 4vh;
 }
