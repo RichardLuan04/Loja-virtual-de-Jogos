@@ -1,0 +1,188 @@
+*{
+    font-family: Bruno ace, 'Times New Roman', Arial;
+}
+
+/* Estilizando o header */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../imgs/background\ -\ Games.png);
+    background-repeat: no-repeat ;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(22, 11, 88, 0.5);
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#site-titulo h1{
+    font-family: Bruno ace, 'Times New Roman', Arial;
+    color: #fff;
+    font-size: 5vh;
+    margin-left: 50px;
+}
+
+#site-titulo {
+    width: 40%;
+    display: flex;
+    justify-content: start;
+}
+
+.pesquisar {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+}
+
+#CampoPesquisa {
+    width: 60%;
+    height: 30%;
+    border: solid 4px;
+    background: none;
+    border-radius: 30px;
+    border-color: #fff;
+    color: #fff;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+#lupa {
+    position: absolute;
+    height: 4%;
+    padding: 20px;
+    z-index: 1;   /* Ajeitar lupa, fazendo com que o texto nao ultrapasse ela */
+}
+
+#perfil {
+    width: 20%;
+}
+
+#perfil input{
+    border-radius: 100%;
+    height: 10vh;
+    width: 6vw;
+}
+
+/* Estilizando o main */
+
+.Principal {
+    height: 80vh;
+    width: 100vw;
+    background-color: rgba(22, 11, 88, 0.5);
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 70vw;
+}
+
+figure {
+    height: 38vh;
+    width: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+figure img {
+    height: 80%;
+    width: 80%;
+    object-fit:cover;
+    object-position: center;
+    border-radius: 30px;
+}
+
+.titulo-active {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    font-size: 3vh;
+    margin-top: 10px;
+}
+
+.topo-games {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.baixo-games {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilizando o Aside */
+
+aside{
+    height: 80vh;
+    width: 30vw;
+}
+
+.opcoes {
+    background: linear-gradient(180deg, rgba(69, 25, 124, 0.7) 0%, rgba(53, 67, 141, 0.7) 100%);
+    height: 95%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+}
+
+aside p {
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', Arial;
+    font-size: 4vh;
+}
+
+aside input {
+    height: 7vh;
+    width: 20vw;
+    color: #fff;
+    background-color: #5C90DFD9;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.5vh;
+    text-align: start;
+    padding-left: 20px;
+}
+
+aside img {
+    position: absolute;
+    height: 5%;
+    padding-right: 20px;
+}
+
+.fps, .corrida, .esportes, .rpg, .mundo-aberto, .estrategia, .puzzle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+.rpg img, .mundo-aberto img, .estrategia img, .puzzle img {
+    filter: invert(100%);
+}
+
+.fps img, .corrida img {
+    height: 7%;
+}

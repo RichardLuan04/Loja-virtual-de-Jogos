@@ -1,18 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/games.css">
+    <title>Games</title>
 </head>
+
 <body>
     <header>
-       
+        <div id="site-titulo">
+            <h1>GameMaker</h1>
+        </div>
+
+        <div class="pesquisar">
+            <input type="text" id="CampoPesquisa">
+            <input type="image" src="../imgs/lupa.png" id="lupa">
+        </div>
+
+        <div id="perfil">
+            <input type="image" src="../imgs/Perfil.jpeg">
+        </div>
     </header>
 
-    <main>
+    <div class="Principal">
+        <main>
+            <div class="topo-games">
+                <figure>
+                    <p class="titulo-active">GTA V</p>
+                    <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg">
+                </figure>
 
-    </main>
+                <figure>
+                    <p class="titulo-active">Far cry 4</p>
+                    <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg">
+                </figure>
+
+                <figure>
+                    <p class="titulo-active">God of War</p>
+                    <img src="https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg">
+                </figure>
+            </div>
+
+            <div class="baixo-games">
+                <figure>
+                    <p class="titulo-active">Call of Duty</p>
+                    <img src="https://media.rawg.io/media/games/9c5/9c5bc0b6e67102bc96dcf1ba41509e42.jpg">
+                </figure>
+
+                <figure>
+                    <p class="titulo-active">Minecraft</p>
+                    <img src="https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg">
+                </figure>
+
+                <figure>
+                    <p class="titulo-active">Assasin's Creed</p>
+                    <img src="https://media.rawg.io/media/games/0bc/0bcc108295a244b488d5c25f7d867220.jpg">
+                </figure>
+            </div>
+        </main>
+
+        <aside>
+            <div class="opcoes">
+                <p>Gêneros</p>
+
+                <div class="fps">
+                    <input type="button" value="FPS">
+                    <img src="../imgs/icon fps.png" alt="Icone fps">
+                </div>
+
+                <div class="corrida">
+                    <input type="button" value="Corrida">
+                    <img src="../imgs/icone corrida.png" alt="Icone fps">
+                </div>
+
+                <div class="esportes">
+                    <input type="button" value="Esportes">
+                    <img src="../imgs/icone esporte.webp" alt="Icone esporte">
+                </div>
+
+                <div class="rpg">
+                    <input type="button" value="RPG">
+                    <img src="../imgs/icone rpg.png" alt="Icone rpg">
+                </div>
+
+                <div class="mundo-aberto">
+                    <input type="button" value="Mundo Aberto">
+                    <img src="../imgs/mundo aberto icone.png" alt="Icone mundo aberto">
+                </div>
+
+                <div class="estrategia">
+                    <input type="button" value="Estratégia">
+                    <img src="../imgs/icone estrategia.png" alt="Icone estrategia">
+                </div>
+
+                <div class="puzzle">
+                    <input type="button" value="Puzzle">
+                    <img src="../imgs/icone puzzle.webp" alt="Icone Puzzle">
+                </div>
+            </div>
+        </aside>
+    </div>
 </body>
+
 </html>
