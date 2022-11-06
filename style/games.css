@@ -63,14 +63,20 @@ header {
     z-index: 1;   /* Ajeitar lupa, fazendo com que o texto nao ultrapasse ela */
 }
 
-#perfil {
+.carrinho {
     width: 20%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-#perfil input{
-    border-radius: 100%;
-    height: 10vh;
-    width: 6vw;
+#carrinho-image{
+    height: 12vh;
+    filter: invert(100%);
+    transform: scaleX(-1);
 }
 
 /* Estilizando o main */
@@ -100,21 +106,66 @@ figure {
     align-items: flex-start;
 }
 
-figure img {
-    height: 80%;
-    width: 80%;
-    object-fit:cover;
-    object-position: center;
+.filtro {
+    height: 34.4%;
+    width: 19.8%;
     border-radius: 30px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(180deg, rgba(67, 41, 117, 1), rgba(87, 129, 208, 0.2));
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
-.titulo-active {
+.botao-adquirir{
+    height: 100%;
+    width: 100%;
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.botao-adquirir button {
+    height: 20%;
+    width: 60%;
+    border: solid 2.5px;
+    border-color: #fff;
+    border-radius: 15px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    font-size: 3vh;
+    transition: 0.5s;
+}
+
+.botao-adquirir button:hover {
+    transform: scale(1.1);
+}
+
+figure img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.filtro:hover, .filtro .titulo:hover{
+    opacity: 1;
+    color: #fff;
+}
+
+.titulo {
     position: absolute;
     z-index: 2;
-    color: #fff;
     font-size: 3vh;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .topo-games {
@@ -165,6 +216,12 @@ aside input {
     font-size: 2.5vh;
     text-align: start;
     padding-left: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+aside input:hover{
+    transform: scale(1.1);
 }
 
 aside img {
