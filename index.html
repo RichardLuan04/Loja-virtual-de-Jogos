@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,10 @@
     <link rel="stylesheet" href="./style/index.css">
 
     <script src="./js/Modal-Inicial.js" defer></script>
+    <script src="./js/login.js" defer></script>
     <title>Game Maker</title>
 </head>
+
 <body>
 
     <!--Popup de cadastro-->
@@ -25,13 +28,13 @@
             </div>
 
             <div class="inputs-text">
-                <input type="text" placeholder="Nome:" class="Texto_Nome"/>
+                <input type="text" placeholder="Nome:" class="Texto_Nome" />
                 <input type="email" placeholder="E-mail:" class="Texto_Email">
-                <input type="password" placeholder="Senha:" class="Texto_Senha"/>
+                <input type="password" placeholder="Senha:" class="Texto_Senha" />
             </div>
 
             <div class="botao-cadastro">
-                <input type="submit" value="CADASTRAR">
+                <input type="submit" value="CADASTRAR" onclick="Logar()">
             </div>
         </form>
     </section>
@@ -48,12 +51,13 @@
             </div>
 
             <div class="inputs-text">
-                <input type="text" placeholder="Nome:" class="Texto_Nome"/>
-                <input type="password" placeholder="Senha:" class="Texto_Senha"/>
+                <input type="text" placeholder="Nome:" class="Texto_Nome" />
+                <input type="password" placeholder="Senha:" class="Texto_Senha" />
             </div>
 
             <div class="botao-login">
-                <input type="submit" value="LOGIN">
+                <input type="submit" value="LOGIN" onclick="fazerLogin()">
+
             </div>
         </form>
     </section>
@@ -64,17 +68,18 @@
         <div class="Div-cima">
             <h1>Vamos para o</h1>
             <h1>próximo nível</h1>
-         </div>
+        </div>
 
         <nav>
             <div class="retangulo-1">
                 <input type="button" value="entre" onclick="Abrir_Modal(modal_login)">
-           </div>
+            </div>
 
             <div class="retangulo-2">
-               <input type="button" value="cadastre" onclick="Abrir_Modal(modal_cadastro)">
+                <input type="button" value="cadastre" onclick="Abrir_Modal(modal_cadastro)">
             </div>
         </nav>
     </main>
 </body>
+
 </html>

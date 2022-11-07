@@ -1,0 +1,52 @@
+* {
+    font-family: Bruno ace, 'Times New Roman', Arial;
+}
+
+body {
+    width: 80vw;
+    height: 80vh;
+}
+
+header {
+    width: 80vw;
+    height: 15vh;
+}
+
+.subtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulo p {
+    font-size: 3vh;
+    color: #ffff;
+}
+
+.botao-fundo {
+    height: 50%;
+    width: 5%;
+    border-radius: 50%;
+    background-color: #0F0E5F;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.botao-fundo input {
+    position: absolute;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 4.5vh;
+    transition: 0.5s;
+}
+
+.botao-fundo input:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+.informacoes-compra {
+    display: none;
+}
