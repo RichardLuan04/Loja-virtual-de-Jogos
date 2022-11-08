@@ -1,5 +1,5 @@
-var modal_login = document.querySelector(".modal-login")
-var modal_cadastro = document.querySelector(".modal-cadastro")
+let modal_login = document.querySelector(".modal-login")
+let modal_cadastro = document.querySelector(".modal-cadastro")
 
 function Abrir_Modal(modal){
     modal.classList.add("active")
