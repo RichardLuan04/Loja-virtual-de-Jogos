@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/games.css">
     <link rel="stylesheet" href="../style/compras.css">
+
+    <script src="../js/Compras-games.js" defer></script>
+    <script src="../js/Aside-api.js" defer></script>
+
     <title>Games</title>
 </head>
 
@@ -17,17 +21,17 @@
     <!--Carrinho de compras modal-->
 
     <div class="modal-compras">
-        <header>
+        <div class="header">
             <div class="subtitulo">
                 <p>Carrinho de jogos</p>
             </div>
     
             <div class="botao-fundo">
-                <input type="button" value="X">
+                <input type="button" value="X" onclick="Fechar_Modal_Carrinho()">
             </div>
-        </header>
+        </div>
     
-        <main>
+        <div class="main">
             <div class="compra">
                 <div class="informacoes-compra">
                     <div class="div-imagem">
@@ -44,9 +48,63 @@
     
                 <hr>
             </div>
-        </main>
+            
+            <div class="compra">
+                <div class="informacoes-compra">
+                    <div class="div-imagem">
+                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
+                        <p class="nome-jogo">FarCry 4</p>
+                    </div>
+        
+                    <div class="div-infos">
+                        <p class="preco-jogo">R$ 159,94</p>
+            
+                        <input type="button" value="X">
+                    </div>
+                </div>
     
-        <footer>
+                <hr>
+            </div>
+            
+
+            <div class="compra">
+                <div class="informacoes-compra">
+                    <div class="div-imagem">
+                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
+                        <p class="nome-jogo">FarCry 4</p>
+                    </div>
+        
+                    <div class="div-infos">
+                        <p class="preco-jogo">R$ 159,94</p>
+            
+                        <input type="button" value="X">
+                    </div>
+                </div>
+    
+                <hr>
+            </div>
+
+            <div class="compra">
+                <div class="informacoes-compra">
+                    <div class="div-imagem">
+                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
+                        <p class="nome-jogo">FarCry 4</p>
+                    </div>
+        
+                    <div class="div-infos">
+                        <p class="preco-jogo">R$ 159,94</p>
+            
+                        <input type="button" value="X">
+                    </div>
+                </div>
+    
+                <hr>
+            </div>
+
+
+        </div>
+    
+        <div class="footer">
             <div class="button-left">
                 <label for="estado">Método de pagamento
                     <select id="estado">
@@ -62,7 +120,7 @@
                     <input type="button" value="FINALIZAR COMPRA" id="botao-compra">
                 </label>
             </div>
-        </footer>
+        </div>
     </div>
 
     <!--Pagina padrão de games-->
@@ -79,149 +137,152 @@
             </div>
 
             <div class="carrinho">
-                <input type="image" src="../imgs/carrinho de compras.png" onclick="AnimacaoCarrinho()" id="carrinho-image">
+                <input type="image" src="../imgs/carrinho de compras.png" onclick="Abrir_Modal_Carrinho()" id="carrinho-image">
             </div>
         </header>
 
         <div class="Principal">
             <main>
+
+                <p id="titulo-atual"></p>
+
                 <div class="games">
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">GTA V</p>
+                            <p class="titulo" id="titulo-id-1"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg">
+                        <img src="" id="game1">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">Far cry 4</p>
+                            <p class="titulo" id="titulo-id-2"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg">
+                        <img src="" id="game2">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">God of War</p>
+                            <p class="titulo" id="titulo-id-3"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg">
+                        <img src="" id="game3">
                     </figure>
                 </div>
 
                 <div class="games">
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">Call of Duty</p>
+                            <p class="titulo" id="titulo-id-4"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/9c5/9c5bc0b6e67102bc96dcf1ba41509e42.jpg">
+                        <img src="" id="game4">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">Minecraft</p>
+                            <p class="titulo" id="titulo-id-5"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg">
+                        <img src="" id="game5">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">Assasin's Creed</p>
+                            <p class="titulo" id="titulo-id-6"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/0bc/0bcc108295a244b488d5c25f7d867220.jpg">
-                    </figure>
-                </div>
-
-                <div class="games">
-                    <figure>
-                        <div class="filtro">
-                            <p class="titulo">GTA V</p>
-
-                            <div class="botao-adquirir">
-                                <button>Adquirir</button>
-                            </div>
-                        </div>
-                        <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg">
-                    </figure>
-
-                    <figure>
-                        <div class="filtro">
-                            <p class="titulo">Far cry 4</p>
-
-                            <div class="botao-adquirir">
-                                <button>Adquirir</button>
-                            </div>
-                        </div>
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg">
-                    </figure>
-
-                    <figure>
-                        <div class="filtro">
-                            <p class="titulo">God of War</p>
-
-                            <div class="botao-adquirir">
-                                <button>Adquirir</button>
-                            </div>
-                        </div>
-                        <img src="https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg">
+                        <img src="" id="game6">
                     </figure>
                 </div>
 
                 <div class="games">
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">GTA V</p>
+                            <p class="titulo" id="titulo-id-7"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg">
+                        <img src="" id="game7">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">Far cry 4</p>
+                            <p class="titulo" id="titulo-id-8"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg">
+                        <img src="" id="game8">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">God of War</p>
+                            <p class="titulo" id="titulo-id-9"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg">
+                        <img src="" id="game9"> 
+                    </figure>
+                </div>
+
+                <div class="games">
+                    <figure>
+                        <div class="filtro">
+                            <p class="titulo" id="titulo-id-10"></p>
+
+                            <div class="botao-adquirir">
+                                <button>Adquirir</button>
+                            </div>
+                        </div>
+                        <img src="" id="game10">
+                    </figure>
+
+                    <figure>
+                        <div class="filtro">
+                            <p class="titulo" id="titulo-id-11"></p>
+
+                            <div class="botao-adquirir">
+                                <button>Adquirir</button>
+                            </div>
+                        </div>
+                        <img src="" id="game11">
+                    </figure>
+
+                    <figure>
+                        <div class="filtro">
+                            <p class="titulo" id="titulo-id-12"></p>
+
+                            <div class="botao-adquirir">
+                                <button>Adquirir</button>
+                            </div>
+                        </div>
+                        <img src="" id="game12">
                     </figure>
                 </div>
 
@@ -229,35 +290,35 @@
                 <div class="games">
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">GTA V</p>
+                            <p class="titulo" id="titulo-id-13"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg">
+                        <img src="" id="game13">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">Far cry 4</p>
+                            <p class="titulo" id="titulo-id-14"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg">
+                        <img src="" id="game14">
                     </figure>
 
                     <figure>
                         <div class="filtro">
-                            <p class="titulo">God of War</p>
+                            <p class="titulo" id="titulo-id-15"></p>
 
                             <div class="botao-adquirir">
                                 <button>Adquirir</button>
                             </div>
                         </div>
-                        <img src="https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg">
+                        <img src="" id="game15">
                     </figure>
                 </div>
 
@@ -265,6 +326,18 @@
 
             <aside>
                 <div class="opcoes">
+                    <p>Geral</p>
+
+                    <div class="popular">
+                        <input type="button" value="Populares" onclick="Mais_Populares()">
+                        <img src="../imgs/icon star.png" alt="Icone pop">
+                    </div>
+
+                    <div class="geral">
+                        <input type="button" value="Games" onclick="Games()">
+                        <img src="../imgs/icon controle.png" alt="Icone game">
+                    </div>
+
                     <p>Gêneros</p>
 
                     <div class="fps">
@@ -295,7 +368,7 @@
                     <p>Plataformas</p>
 
                     <div class="pc">
-                        <input type="button" value="PC">
+                        <input type="button" value="PC" onclick="Plataformas('PC')">
                         <img src="../imgs/PC icon.png" alt="Icone PC">
                     </div>
 

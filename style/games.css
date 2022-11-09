@@ -11,19 +11,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .principal-games{
-    background-color: rgba(22, 11, 88, 0.5);
-    display: none;
+    display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 240vh;
+    width: 100%;
+    height: 100%;
 }
 
 header {
-    height: 20vh;
-    width: 100vw;
+    background-color: rgba(22, 11, 88, 0.5);
+    height: 20%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -98,6 +101,7 @@ header {
 }
 
 main {
+    background-color: rgba(22, 11, 88, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -184,9 +188,15 @@ figure img {
     align-items: center;
 }
 
+#titulo-atual {
+    color: #fff;
+    font-size: 3vw;
+}
+
 /* Estilizando o Aside */
 
 aside {
+    background-color: rgba(22, 11, 88, 0.5);
     height: 220vh;
     width: 30vw;
 }
@@ -218,8 +228,8 @@ aside input {
     font-size: 2.5vh;
     text-align: start;
     padding-left: 20px;
-    cursor: pointer;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 aside input:hover {
@@ -240,7 +250,9 @@ aside img {
 .pc,
 .xbox,
 .ps,
-.nintendo {
+.nintendo,
+.popular,
+.geral {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -253,7 +265,9 @@ aside img {
 .pc img,
 .xbox img,
 .ps img,
-.nintendo img {
+.nintendo img,
+.popular img,
+.geral img {
     filter: invert(100%);
 }
 
