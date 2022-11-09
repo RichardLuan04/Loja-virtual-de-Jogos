@@ -28,7 +28,7 @@ async function Mais_Populares() {
 }
 
 // Chamando tela de jogos para ter algo para mostrar
-//Games()
+Games()
 
 // Pesquisando por jogos de todas as categorias
 
@@ -88,11 +88,10 @@ async function Plataformas (plataforma){
 
 // Pesquisando por jogos de diferentes generos
 
-async function Generos(genero) {
-    document.getElementById("titulo-atual").innerText = genero
+async function Generos(genero, name) {
+    document.getElementById("titulo-atual").innerText = name
 
     for (let i=1;i<=15;){  
-        
         let random_page = parseInt(Math.random(1) * 100)
         let random_game = parseInt(Math.random(1) * 20)
 
@@ -101,11 +100,11 @@ async function Generos(genero) {
         let response = await fetch(endpoint)
         let bodyJson = await response.json()
 
-        let generoArray = bodyJson.results[random_game].genre
+        let generoArray = bodyJson.results[random_game].genres
         
-        for (let cont = 0;cont<generoArray?.length;cont++){
+        for (let cont = 0;cont<generoArray.length;cont++){
 
-            if (bodyJson.results[random_game].genre[cont].name === genero){
+            if (bodyJson.results[random_game].genres[cont].name === genero){
 
                 let img = document.getElementById(`game${i}`)
                 let text = document.getElementById(`titulo-id-${i}`)
