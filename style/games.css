@@ -150,9 +150,9 @@ figure {
     border-radius: 15px;
     color: #fff;
     background: none;
-    cursor: pointer;
     font-size: 3vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .botao-adquirir button:hover {

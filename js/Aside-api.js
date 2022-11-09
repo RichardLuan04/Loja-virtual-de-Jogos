@@ -4,6 +4,7 @@
 // Quantidade de paginas = 99 (usando 31)
 // Numeros de jogos por pagina = 20
 
+// Pesquisando por jogos populares
 
 async function Mais_Populares() {
 
@@ -18,18 +19,24 @@ async function Mais_Populares() {
         let response = await fetch(endpoint)
         let bodyJson = await response.json()
 
-        document.getElementById(`game${i}`).src = bodyJson.results[random_game].background_image
-        document.getElementById(`titulo-id-${i}`).innerText = bodyJson.results[random_game].name
+        let img = document.getElementById(`game${i}`)
+        let text = document.getElementById(`titulo-id-${i}`)
+
+        img.src = bodyJson.results[random_game].background_image
+        text.innerText = bodyJson.results[random_game].name
     }
 }
 
-Games() // Chamando tela de jogos para ter algo para mostrar
+// Chamando tela de jogos para ter algo para mostrar
+//Games()
+
+// Pesquisando por jogos de todas as categorias
 
 async function Games() {
     document.getElementById("titulo-atual").innerText = "Games"
 
     for (let i=1;i<=15;i++){
-        let random_page = parseInt(Math.random() * 250)
+        let random_page = parseInt(Math.random() * 100)
         let random_game = parseInt(Math.random() * 20)
 
         let endpoint = `https://api.rawg.io/api/games?key=7787766744a34328ba34b4df7a3947f0&page=${random_page}`
@@ -37,18 +44,22 @@ async function Games() {
         let response = await fetch(endpoint)
         let bodyJson = await response.json()
 
-        document.getElementById(`game${i}`).src = bodyJson.results[random_game].background_image
-        document.getElementById(`titulo-id-${i}`).innerText = bodyJson.results[random_game].name
+        let img = document.getElementById(`game${i}`)
+        let text = document.getElementById(`titulo-id-${i}`)
+
+        img.src = bodyJson.results[random_game].background_image
+        text.innerText = bodyJson.results[random_game].name
     }
 }
 
-async function Plataformas (plataforma){
+// Pesquisando por jogos de diversas plataformas diferentes
 
-    debugger
+async function Plataformas (plataforma){
+    
     document.getElementById("titulo-atual").innerText = plataforma
 
-    for (let i=1;i<=15;i++){
-        let random_page = parseInt(Math.random() * 250)
+    for (let i=1;i<=15;){  
+        let random_page = parseInt(Math.random() * 100)
         let random_game = parseInt(Math.random() * 20)
 
         let endpoint = `https://api.rawg.io/api/games?key=7787766744a34328ba34b4df7a3947f0&page=${random_page}`
@@ -56,14 +67,54 @@ async function Plataformas (plataforma){
         let response = await fetch(endpoint)
         let bodyJson = await response.json()
 
-        for (let cont = 0;cont<bodyJson.results[random_game].parent_platforms.lenght();){
+        let plataformaArray = bodyJson.results[random_game].platforms
+        
+        for (let cont = 0;cont<plataformaArray.length;cont++){
 
-            if (bodyJson.results[random_game].parent_platforms[cont].name == plataforma){
+            if (bodyJson.results[random_game].platforms[cont].platform.name === plataforma){
 
-                document.getElementById(`game${i}`).src = bodyJson.results[random_game].background_image
-                document.getElementById(`titulo-id-${i}`).innerText = bodyJson.results[random_game].name
+                let img = document.getElementById(`game${i}`)
+                let text = document.getElementById(`titulo-id-${i}`)
 
-                cont++
+                img.src = bodyJson.results[random_game].background_image
+                text.innerText = bodyJson.results[random_game].name
+
+                i++
+                break
+            }
+        }
+    }
+}
+
+// Pesquisando por jogos de diferentes generos
+
+async function Generos(genero) {
+    document.getElementById("titulo-atual").innerText = genero
+
+    for (let i=1;i<=15;){  
+        
+        let random_page = parseInt(Math.random(1) * 100)
+        let random_game = parseInt(Math.random(1) * 20)
+
+        let endpoint = `https://api.rawg.io/api/games?key=7787766744a34328ba34b4df7a3947f0&page=${random_page}`
+
+        let response = await fetch(endpoint)
+        let bodyJson = await response.json()
+
+        let generoArray = bodyJson.results[random_game].genre
+        
+        for (let cont = 0;cont<generoArray?.length;cont++){
+
+            if (bodyJson.results[random_game].genre[cont].name === genero){
+
+                let img = document.getElementById(`game${i}`)
+                let text = document.getElementById(`titulo-id-${i}`)
+
+                img.src = bodyJson.results[random_game].background_image
+                text.innerText = bodyJson.results[random_game].name
+
+                i++
+                break
             }
         }
     }
