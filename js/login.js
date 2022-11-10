@@ -16,9 +16,6 @@ async function fazerLogin() {
     })
 
     const json = await resposta.json()
-
-    if (resposta.ok) {
-        window.location.href = "pages/games.html"
-    }
+    alert(json.mensagem)
 }
 
