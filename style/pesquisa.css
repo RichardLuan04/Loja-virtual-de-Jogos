@@ -1,10 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url(../imgs/background\ -\ Games.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(22, 11, 88, 0.5);
+}
+
 header {
     background-color: rgba(22, 11, 88, 0.5);
     height: 20vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
 }
@@ -24,11 +39,49 @@ header {
     transform: scaleX(-1);
 }
 
-main {
-    display: flex;
-    flex-direction: row;
+
+
+h1 {
+    color: white;
 }
 
+p {
+    color: white
+}
+
+h2 {
+    display: inline-block;
+    color: white;
+}
+
+h5 {
+    display: inline-block;
+    color: white;
+}
+
+
 #game-img {
-    height: 30vh;
+    height: 45vh;
+}
+
+.ComprejaDivirtase {
+
+    position: absolute;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: red;
+    right: 30vh;
+    top: 30vh;
+
+
+
+
+}
+
+.button {
+    display: block;
+    width: 230px;
+    height: 20px;
+    margin: 8px;
+    padding: 10px;
 }

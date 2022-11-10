@@ -16,7 +16,7 @@ body {
     justify-content: center;
 }
 
-.principal-games{
+.principal-games {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -142,7 +142,7 @@ figure {
     margin-bottom: 20px;
 }
 
-.botao-adquirir button {
+#adquirir {
     height: 20%;
     width: 60%;
     border: solid 2.5px;
@@ -155,7 +155,7 @@ figure {
     cursor: pointer;
 }
 
-.botao-adquirir button:hover {
+#adquirir:hover {
     transform: scale(1.1);
 }
 

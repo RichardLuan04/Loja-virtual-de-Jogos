@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style/index.css">
 
     <script src="./js/Modal-Inicial.js" defer></script>
-    <script src="./js/.js" defer></script>
+    <script src="./js/login.js" defer></script>
     <title>Game Maker</title>
 </head>
 
@@ -34,7 +34,7 @@
             </div>
 
             <div class="botao-cadastro">
-                <input type="submit" value="CADASTRAR" onclick="Logar()">
+                <input type="submit" value="CADASTRAR" onclick="">
             </div>
         </form>
     </section>
@@ -51,12 +51,12 @@
             </div>
 
             <div class="inputs-text">
-                <input type="text" placeholder="Nome:" class="Texto_Nome"  />
-                <input type="password" placeholder="Senha:" class="Texto_Senha" />
+                <input type="text" placeholder="E-mail:" class="Texto_Nome" id="campoEmail" />
+                <input type="password" placeholder="Senha:" class="Texto_Senha" id="campoSenha" />
             </div>
 
             <div class="botao-login">
-                <input type="submit" value="LOGIN" onclick="fazerLogin()">
+                <input type="button" value="LOGIN" onclick="fazerLogin()">
 
             </div>
         </form>

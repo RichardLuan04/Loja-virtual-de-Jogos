@@ -7,14 +7,18 @@ async function fazerLogin() {
         senha: senha.value
     }
 
-    const resposta = await fetch(" https://codifica-demo-api.herokuapp.com/api/v1/users/login", {
+    var resposta = await fetch("https://codifica-demo-api.herokuapp.com/api/v1/users/login", {
         method: "POST",
         body: JSON.stringify(body),
-        Headers: {
-            "const-type": "aplication/json"
+        headers: {
+            "Content-Type": "application/json"
         }
     })
 
     const json = await resposta.json()
-    alert(json.mensagem)
+
+    if (resposta.ok) {
+        window.location.href = "pages/games.html"
+    }
 }
+

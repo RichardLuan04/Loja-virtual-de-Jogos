@@ -25,85 +25,32 @@
             <div class="subtitulo">
                 <p>Carrinho de jogos</p>
             </div>
-    
+
             <div class="botao-fundo">
                 <input type="button" value="X" onclick="Fechar_Modal_Carrinho()">
             </div>
         </div>
-    
+
         <div class="main">
-            <div class="compra">
-                <div class="informacoes-compra">
-                    <div class="div-imagem">
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
-                        <p class="nome-jogo">FarCry 4</p>
-                    </div>
-        
-                    <div class="div-infos">
-                        <p class="preco-jogo">R$ 159,94</p>
-            
-                        <input type="button" value="X">
-                    </div>
-                </div>
-    
-                <hr>
-            </div>
-            
-            <div class="compra">
-                <div class="informacoes-compra">
-                    <div class="div-imagem">
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
-                        <p class="nome-jogo">FarCry 4</p>
-                    </div>
-        
-                    <div class="div-infos">
-                        <p class="preco-jogo">R$ 159,94</p>
-            
-                        <input type="button" value="X">
-                    </div>
-                </div>
-    
-                <hr>
-            </div>
-            
+            <!--Criar div class="compra"-->
+            <!--Criar div class="informacoes-compra"-->
+            <!--Criar div  class="div-imagem"-->
+            <!--Criar img    id="imagem-carrinho"-->
+            <!--Criar p  class="nome-jogo"-->
+            <!--Div-->
 
-            <div class="compra">
-                <div class="informacoes-compra">
-                    <div class="div-imagem">
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
-                        <p class="nome-jogo">FarCry 4</p>
-                    </div>
-        
-                    <div class="div-infos">
-                        <p class="preco-jogo">R$ 159,94</p>
-            
-                        <input type="button" value="X">
-                    </div>
-                </div>
-    
-                <hr>
-            </div>
+            <!--Criar div  class="div-infos"-->
+            <!--Criar p class="preco-jogo"-->
 
-            <div class="compra">
-                <div class="informacoes-compra">
-                    <div class="div-imagem">
-                        <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt="Game">
-                        <p class="nome-jogo">FarCry 4</p>
-                    </div>
-        
-                    <div class="div-infos">
-                        <p class="preco-jogo">R$ 159,94</p>
-            
-                        <input type="button" value="X">
-                    </div>
-                </div>
-    
-                <hr>
-            </div>
+            <!--Criar input button  value="X"-->
+            <!--Div-->
+            <!--Div-->
 
+            <!--Criar hr-->
+            <!--Div-->
 
         </div>
-    
+
         <div class="footer">
             <div class="button-left">
                 <label for="estado">Método de pagamento
@@ -114,9 +61,9 @@
                     </select>
                 </label>
             </div>
-    
+
             <div class="button-right">
-                <label for="botao-compra">Total: R$ 479.82
+                <label for="botao-compra">Total: R$ 0
                     <input type="button" value="FINALIZAR COMPRA" id="botao-compra">
                 </label>
             </div>
@@ -137,7 +84,8 @@
             </div>
 
             <div class="carrinho">
-                <input type="image" src="../imgs/carrinho de compras.png" onclick="Abrir_Modal_Carrinho()" id="carrinho-image">
+                <input type="image" src="../imgs/carrinho de compras.png" onclick="Abrir_Modal_Carrinho()"
+                    id="carrinho-image">
             </div>
         </header>
 
@@ -152,7 +100,7 @@
                             <p class="titulo" id="titulo-id-1"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game1">
@@ -163,7 +111,7 @@
                             <p class="titulo" id="titulo-id-2"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game2">
@@ -174,7 +122,7 @@
                             <p class="titulo" id="titulo-id-3"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game3">
@@ -187,7 +135,7 @@
                             <p class="titulo" id="titulo-id-4"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game4">
@@ -198,7 +146,7 @@
                             <p class="titulo" id="titulo-id-5"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game5">
@@ -209,7 +157,7 @@
                             <p class="titulo" id="titulo-id-6"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game6">
@@ -222,7 +170,7 @@
                             <p class="titulo" id="titulo-id-7"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game7">
@@ -233,7 +181,7 @@
                             <p class="titulo" id="titulo-id-8"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game8">
@@ -244,10 +192,10 @@
                             <p class="titulo" id="titulo-id-9"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
-                        <img src="" id="game9"> 
+                        <img src="" id="game9">
                     </figure>
                 </div>
 
@@ -257,7 +205,7 @@
                             <p class="titulo" id="titulo-id-10"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game10">
@@ -268,7 +216,7 @@
                             <p class="titulo" id="titulo-id-11"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game11">
@@ -279,7 +227,7 @@
                             <p class="titulo" id="titulo-id-12"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game12">
@@ -293,7 +241,7 @@
                             <p class="titulo" id="titulo-id-13"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game13">
@@ -304,7 +252,7 @@
                             <p class="titulo" id="titulo-id-14"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game14">
@@ -315,7 +263,7 @@
                             <p class="titulo" id="titulo-id-15"></p>
 
                             <div class="botao-adquirir">
-                                <button>Adquirir</button>
+                                <input type="button" onclick="Adicionar_Jogos()" id="adquirir" value="Adquirir">
                             </div>
                         </div>
                         <img src="" id="game15">

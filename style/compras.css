@@ -93,7 +93,7 @@
     align-items: center;
 }
 
-.div-infos{
+.div-infos {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -109,7 +109,7 @@
     object-fit: cover;
 }
 
-.nome-jogo{
+.nome-jogo {
     font-size: 4vh;
     color: #FFFFFF;
     margin-right: 80px;
@@ -150,7 +150,8 @@ hr {
     align-items: center;
 }
 
-.button-left, .button-right{
+.button-left,
+.button-right {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -186,7 +187,7 @@ select:hover {
     transform: scale(1.1);
 }
 
-.button-right label{
+.button-right label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,7 +198,7 @@ select:hover {
 }
 
 .button-right input {
-    background-color: #4CCEB7 ;
+    background-color: #4CCEB7;
     border: none;
     border-radius: 10px;
     color: #FFFFFF;
@@ -209,7 +210,7 @@ select:hover {
     transition: 0.5s;
 }
 
-.button-right input:hover{
+.button-right input:hover {
     transform: scale(1.1);
 }
 
@@ -218,6 +219,7 @@ select:hover {
         opacity: 0;
         transform: translate3d(0, -60px, 0);
     }
+
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
