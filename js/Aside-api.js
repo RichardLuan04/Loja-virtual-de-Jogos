@@ -9,7 +9,7 @@ const key = '190508eb6b3047539fa72bf5f3b765b6'
 async function Mais_Populares() {
 
     let random_page = parseInt(Math.random() * 31)
-    let endpoint = `https://api.rawg.io/api/games?metacritic=80,100&key=${key}page=${random_page}`
+    let endpoint = `https://api.rawg.io/api/games?metacritic=80,100&key=${key}&page=${random_page}`
     let response = await fetch(endpoint)
     let bodyJson = await response.json()
 
@@ -32,7 +32,7 @@ async function Mais_Populares() {
 
 async function Games() {
 
-    let random_page = parseInt(Math.random() * 100)
+    let random_page = parseInt(Math.random() * 100 + 1)
     let endpoint = `https://api.rawg.io/api/games?key=${key}&page=${random_page}`
     let response = await fetch(endpoint)
     let bodyJson = await response.json()
@@ -55,7 +55,8 @@ let imagens_contagem = 0
 
 async function Plataformas(plataforma) {
     
-    let random_page = parseInt(Math.random() * 100)
+    document.getElementById("titulo-atual").innerText = plataforma
+    let random_page = parseInt(Math.random() * 100 + 1)
     let endpoint = `https://api.rawg.io/api/games?key=${key}&page=${random_page}`
 
     let response = await fetch(endpoint)
@@ -67,7 +68,7 @@ async function Plataformas(plataforma) {
         for (let cont = 0; cont < plataformaArray.length; cont++) {
 
             if (bodyJson.results[i].platforms[cont].platform.name === plataforma) {
- 
+                
                 imagens_contagem = imagens_contagem + 1
 
                 let img = document.getElementById(`game${imagens_contagem}`)
@@ -79,22 +80,20 @@ async function Plataformas(plataforma) {
                 break
             } 
         }
-
-        if (imagens_contagem < 15){
-            Plataformas(plataforma)
-        } else {
-            document.getElementById("titulo-atual").innerText = plataforma
-            imagens_contagem = 0
-            break
-        }
+    }
+    if (imagens_contagem < 15){
+        Plataformas(plataforma)
+    } else {
+        imagens_contagem = 0
     }
 }
 
 // Pesquisando por jogos de diferentes generos
 
 async function Generos(genero, name) {
-    debugger
-    let random_page = parseInt(Math.random(1) * 100)
+    
+    document.getElementById("titulo-atual").innerText = name
+    let random_page = parseInt(Math.random() * 100 + 1)
     let endpoint = `https://api.rawg.io/api/games?key=${key}&page=${random_page}`
 
     let response = await fetch(endpoint)
@@ -118,13 +117,11 @@ async function Generos(genero, name) {
                 break
             }
         }
-
-        if (imagens_contagem < 15){
-            Generos(genero, name)
-        } else {
-            document.getElementById("titulo-atual").innerText = name
-            imagens_contagem = 0
-            break
-        }
+    }
+    if (imagens_contagem < 15){
+        debugger
+        Generos(genero, name)
+    } else {
+        imagens_contagem = 0
     }
 }

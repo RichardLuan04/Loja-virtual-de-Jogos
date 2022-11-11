@@ -112,7 +112,6 @@
 .nome-jogo {
     font-size: 4vh;
     color: #FFFFFF;
-    margin-right: 80px;
 }
 
 .preco-jogo {
@@ -187,7 +186,7 @@ select:hover {
     transform: scale(1.1);
 }
 
-.button-right label {
+.button-right #valor-total {
     display: flex;
     flex-direction: column;
     align-items: center;
