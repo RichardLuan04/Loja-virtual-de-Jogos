@@ -149,8 +149,7 @@ hr {
     align-items: center;
 }
 
-.button-left,
-.button-right {
+#button-right {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -186,7 +185,7 @@ select:hover {
     transform: scale(1.1);
 }
 
-.button-right #valor-total {
+#button-right #valor-total {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,7 +195,7 @@ select:hover {
     padding-right: 100px;
 }
 
-.button-right input {
+#button-right input {
     background-color: #4CCEB7;
     border: none;
     border-radius: 10px;
@@ -209,7 +208,7 @@ select:hover {
     transition: 0.5s;
 }
 
-.button-right input:hover {
+#button-right input:hover {
     transform: scale(1.1);
 }
 

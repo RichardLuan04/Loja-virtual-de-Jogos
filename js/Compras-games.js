@@ -5,11 +5,12 @@ function Abrir_Modal_Carrinho() {
 function Fechar_Modal_Carrinho() {
     document.querySelector(".modal-compras").style.display = "none"
 }
-debugger
+
 // LocalStorage do carrinho
 let total = 0
-let compras = []
-let compras_Salvas = localStorage.getItem("Compras")
+total.toFixed(2)
+let compras = [] 
+let compras_Salvas = localStorage.getItem("Compras")// Nome da chave ser o email do usuario
 
 if (compras_Salvas !== null){
     compras = JSON.parse(compras_Salvas)
@@ -56,9 +57,11 @@ if (compras_Salvas !== null){
 
         let hr = document.createElement("hr")
         div_compra.append(hr)
-
-        document.getElementById("valor-total").innerText = `R$ ${game.preco_total}`
+      
+        let valor = parseFloat(game.valor)
+        total = total + valor
     }
+    document.getElementById("valor-total").innerText = total
 }
 // Função para adicionar jogos ao carrinho
 
@@ -114,7 +117,6 @@ function Adicionar_Jogos(number) {
         imagem: img.src,
         nomeJogo: p_nome.textContent,
         valor: p_preco.textContent,
-        preco_total: preco.textContent
     }
 
     compras.push(informacoes_compras)
