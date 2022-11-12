@@ -1,16 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 body {
+    height: 100vh;
+    width: 100vw;
     background-image: url(../imgs/background\ -\ Games.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgba(22, 11, 88, 0.5);
 }
 
 header {
@@ -24,64 +18,110 @@ header {
 
 }
 
-.carrinho {
-    width: 20%;
-    height: 50%;
-    border-radius: 15px;
+#site-titulo {
+    height: 100%;
+    width: 50%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#site-titulo p {
+    color: #fff;
+    font-size: 5vh;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+}
+
+#carrinho {
+    width: 50%;
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#carrinho-image {
-    height: 12vh;
-    transform: scaleX(-1);
+#carrinho input {
+    height: 70%;
+    filter: invert(100%);
 }
 
-
-
-h1 {
-    color: white;
+main {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 11, 88, 0.5);
+    flex-direction: row;
 }
 
-p {
-    color: white
-}
-
-h2 {
-    display: inline-block;
-    color: white;
-}
-
-h5 {
-    display: inline-block;
-    color: white;
-}
-
-
-#game-img {
-    height: 45vh;
-}
-
-.ComprejaDivirtase {
-
-    position: absolute;
-    justify-content: flex-end;
+figure {
+    height: 100%;
+    width: 50%;
+    display: flex;
     flex-direction: column;
-    background-color: red;
-    right: 30vh;
-    top: 30vh;
-
-
-
-
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.button {
-    display: block;
-    width: 230px;
-    height: 20px;
-    margin: 8px;
-    padding: 10px;
+.titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo p {
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    color: #fff;
+    font-size: 5vh;
+}
+
+.nota {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+#stars {
+    color: #fff;
+    font-size: 4vh;
+}
+
+#avaliacao-text {
+    font-size: 3vh;
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-left: 20px;
+}
+
+.descricao {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.descricao img {
+    height: 70%;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.descricao p {
+    font-size: 3vh;
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+}
+
+aside {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
