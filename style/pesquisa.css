@@ -1,10 +1,11 @@
 body {
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     background-image: url(../imgs/background\ -\ Games.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 header {
@@ -13,23 +14,21 @@ header {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
 }
 
 #site-titulo {
     height: 100%;
     width: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: start;
 }
 
 #site-titulo p {
     color: #fff;
     font-size: 5vh;
     font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-left: 80px;
 }
 
 #carrinho {
@@ -37,17 +36,18 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 #carrinho input {
     height: 70%;
     filter: invert(100%);
+    margin-right: 80px;
 }
 
 main {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,31 +57,37 @@ main {
 
 figure {
     height: 100%;
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
 }
 
 .titulo {
     width: 100%;
+    height: 20%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .titulo p {
     font-family: Bruno ace, 'Times New Roman', 'Arial';
     color: #fff;
     font-size: 5vh;
+    margin-top: 10px;
 }
 
 .nota {
     width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content:start;
     align-items: center;
+    margin-top: 10px;
 }
 
 #stars {
@@ -90,38 +96,73 @@ figure {
 }
 
 #avaliacao-text {
-    font-size: 3vh;
+    font-size: 2vh;
     color: #fff;
     font-family: Bruno ace, 'Times New Roman', 'Arial';
     margin-left: 20px;
 }
 
 .descricao {
-    height: 40%;
+    height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: start;
 }
 
 .descricao img {
-    height: 70%;
-    width: 70%;
-    border-radius: 20px;
+    height: 45vh;
+    width: 45vw;
+    border-radius: 10px;
+    object-position: center;
+    object-fit: cover;
 }
 
 .descricao p {
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: #fff;
     font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-top: 20px;
+    text-align: start;
 }
 
 aside {
-    height: 100%;
-    width: 50%;
+    height: 60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content:start;
+    margin-left: 10%;
+}
+
+#preco {
+    color: #00F0FF;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    font-size: 8vh;
+    margin-top: 20px;
+}
+
+#text {
+    color: #fFFF;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    font-size: 4vh;
+    margin-top: 20px;
+}
+
+#botao-adicionar {
+    background: linear-gradient(91.07deg, rgba(71, 108, 255, 0.79) 0%, rgba(112, 11, 160, 0.8) 99.45%);
+    border: none;
+    color: #fff;
+    height: 7vh;
+    width: 30vw;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#botao-adicionar:hover {
+    transform: scale(1.1);
 }
