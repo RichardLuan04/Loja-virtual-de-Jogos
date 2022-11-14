@@ -1,13 +1,17 @@
- const idUsuario =  [] 
- 
- 
- async function fazerLogin() {
-   
+let infosUsuarios = [
+    email = "email",
+    jogosComprados = [],
+    carrinho = []
+]
+
+
+async function fazerLogin() {
+
     var email = document.getElementById("campoEmail").value
     const senha = document.getElementById("campoSenha").value
 
     const body = {
-        email: email,         
+        email: email,
         senha: senha
     }
 
@@ -22,20 +26,25 @@
     const json = await resposta.json()
 
     if (resposta.ok) {
-        // window.location.href = "pages/games.html"
+        salvarInfos(body.email)
+
+        window.location.href = "pages/games.html"
     } else {
         alert(json.mensagem)
-    }   
-    
-   
+    }
+
+    function salvarInfos(email) {
+        infosUsuarios.email = email
+        localStorage.setItem("usuario", infosUsuarios)
+
+
+    }
+
 
 }
 
-const adicionar = idUsuario.push(email)
-let idUsuarioJson = JSON.stringify(idUsuario)
-localStorage.setItem('idUsuario', idUsuarioJson)
-const idString = localStorage.getItem('idUsuario')
 
 
-     
-  
+
+
+
