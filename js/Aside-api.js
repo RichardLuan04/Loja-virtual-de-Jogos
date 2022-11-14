@@ -127,7 +127,11 @@ async function Generos(genero, name) {
 
 // Função para ir para a tela de pesquisa
 function passaValor(valor) {
-    window.location.href = "pesquisa.html?CampoPesquisa="+valor
+    if (valor != ""){
+        window.location.href = "pesquisa.html?CampoPesquisa="+valor
+    } else {
+        alert ("Preencha o campo para poder pesquisar!")
+    }
 }
 
 function Tela_Pesquisa(){

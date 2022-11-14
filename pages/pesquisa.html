@@ -8,18 +8,56 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/pesquisa.css">
+    <link rel="stylesheet" href="../style/compras.css">
 
+    <script src="../js/Compras-games.js" defer></script>
     <script src="../js/Aside-api.js" defer></script>
     <script src="../js/Pesquisa-api.js" defer></script>
 
 <body>
+
+     <!--Carrinho de compras modal-->
+
+     <div class="modal-compras">
+        <div class="header">
+            <div class="subtitulo">
+                <p>Carrinho de jogos</p>
+            </div>
+
+            <div class="botao-fundo">
+                <input type="button" value="X" onclick="Fechar_Modal_Carrinho()">
+            </div>
+        </div>
+
+        <div class="main">
+
+        </div>
+
+        <div class="footer">
+            <div class="button-left">
+                <label for="estado">Método de pagamento
+                    <select id="estado">
+                        <option value="deg">Débito</option>
+                        <option value="cred">Crédito</option>
+                        <option value="pix">Pix</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="button-right">
+                <p id="valor-total"> </p>
+                <input type="button" value="FINALIZAR COMPRA" id="botao-compra">
+            </div>
+        </div>
+    </div>
+    
     <header>
         <div id="site-titulo">
             <p>GameMaker</p>
         </div>
 
         <div id="carrinho">
-            <input type="image" src="../imgs/carrinho de compras.png" onclick=""Abrir_Modal_Carrinho()>
+            <input type="image" src="../imgs/carrinho de compras.png" onclick="Abrir_Modal_Carrinho()">
         </div>
     </header>
 
@@ -29,28 +67,38 @@
                 <p id="titulo-game"></p>
 
                 <div class="nota">
-                    <p id="stars">&#9733 &#9733 &#9733 &#9733 &#9733</p> <!--Fazer dps-->
-                    <p id="avaliacao-text">ALTAMENTE RECOMENDADO</p>
+                    <div id="stars">
+                        <p id="star-1">&#9733</p>
+                        <p id="star-2">&#9733</p>
+                        <p id="star-3">&#9733</p>
+                        <p id="star-4">&#9733</p>
+                        <p id="star-5">&#9733</p>
+                    </div> <!--Fazer dps-->
+                    <p id="avaliacao-text"></p>
                 </div>
             </div>
 
             <div class="descricao">
                 <img src="" alt="Game image" id="imagem-game">
                 
-                <p id="data-game"></p>
+                <p id="data-lancamento"></p>
 
-                <ul id="plataformas">
+                <div id="plataformas">
+                    <p>Plataformas disponiveís: </p>
+                </div>
 
-                </ul>
+                <div id="generos">
+                    <p>Gêneros: </p>
+                </div>
             </div>
 
         </figure>
 
         <aside>
-            <p id="preco">R$ 159,99</p>
+            <p id="preco"></p>
             <p id="text">Compre já e divirta-se</p>
 
-            <input type="button" id="botao-adicionar" value="ADICIONAR AO CARRINHO"/>
+            <input type="button" id="botao-adicionar" value="ADICIONAR AO CARRINHO" onclick="Adicionar_Jogos_Pesquisa()"/>
         </aside>
     </main>
 </body>

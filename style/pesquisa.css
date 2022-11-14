@@ -6,6 +6,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
+    display: grid;
+    place-items: center;
 }
 
 header {
@@ -89,14 +91,18 @@ figure {
     align-items: center;
     margin-top: 10px;
 }
-
 #stars {
-    color: #fff;
-    font-size: 4vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#stars p {
+    font-size: 4.5vh;
+    padding: 5px;
 }
 
 #avaliacao-text {
-    font-size: 2vh;
+    font-size: 3.5vh;
     color: #fff;
     font-family: Bruno ace, 'Times New Roman', 'Arial';
     margin-left: 20px;
@@ -115,6 +121,11 @@ figure {
     border-radius: 10px;
     object-position: center;
     object-fit: cover;
+    transition: 0.4s;
+}
+
+#imagem-game:hover{
+    transform: scale(1.1);
 }
 
 .descricao p {
@@ -165,4 +176,24 @@ aside {
 
 #botao-adicionar:hover {
     transform: scale(1.1);
+}
+
+#plataformas {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+}
+
+#text-plataforma, #text-genero {
+    margin-left: 10px;
+}
+
+#data-lancamento,#generos {
+    display: flex;
+    flex-direction: row;
+}
+
+#data-game {
+    margin-left: 10px;
 }
