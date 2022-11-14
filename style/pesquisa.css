@@ -1,16 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 body {
+    height: 120vh;
+    width: 100vw;
     background-image: url(../imgs/background\ -\ Games.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgba(22, 11, 88, 0.5);
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
 }
 
 header {
@@ -19,69 +16,184 @@ header {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
 }
 
-.carrinho {
-    width: 20%;
+#site-titulo {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#site-titulo p {
+    color: #fff;
+    font-size: 5vh;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-left: 80px;
+}
+
+#carrinho {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#carrinho input {
+    height: 70%;
+    filter: invert(100%);
+    margin-right: 80px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 11, 88, 0.5);
+    flex-direction: row;
+}
+
+figure {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.titulo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo p {
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    color: #fff;
+    font-size: 5vh;
+    margin-top: 10px;
+}
+
+.nota {
+    width: 100%;
     height: 50%;
-    border-radius: 15px;
     display: flex;
     flex-direction: row;
+    justify-content:start;
     align-items: center;
-    justify-content: center;
+    margin-top: 10px;
+}
+#stars {
+    display: flex;
+    flex-direction: row;
 }
 
-#carrinho-image {
-    height: 12vh;
-    transform: scaleX(-1);
+#stars p {
+    font-size: 4.5vh;
+    padding: 5px;
 }
 
-
-
-h1 {
-    color: white;
+#avaliacao-text {
+    font-size: 3.5vh;
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-left: 20px;
 }
 
-p {
-    color: white
-}
-
-h2 {
-    display: inline-block;
-    color: white;
-}
-
-h5 {
-    display: inline-block;
-    color: white;
-}
-
-
-#game-img {
-    height: 45vh;
-}
-
-.ComprejaDivirtase {
-
-    position: absolute;
-    justify-content: flex-end;
+.descricao {
+    height: 40vh;
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    background-color: red;
-    right: 30vh;
-    top: 30vh;
-
-
-
-
 }
 
-.button {
-    display: block;
-    width: 230px;
-    height: 20px;
-    margin: 8px;
-    padding: 10px;
+.descricao img {
+    height: 45vh;
+    width: 45vw;
+    border-radius: 10px;
+    object-position: center;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+#imagem-game:hover{
+    transform: scale(1.1);
+}
+
+.descricao p {
+    font-size: 2.5vh;
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-top: 20px;
+    text-align: start;
+}
+
+aside {
+    height: 70%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:start;
+    margin-left: 10%;
+}
+
+#preco {
+    color: #00F0FF;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    font-size: 8vh;
+    margin-top: 20px;
+}
+
+#text {
+    color: #fFFF;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    font-size: 4vh;
+    margin-top: 20px;
+}
+
+#botao-adicionar {
+    background: linear-gradient(91.07deg, rgba(71, 108, 255, 0.79) 0%, rgba(112, 11, 160, 0.8) 99.45%);
+    border: none;
+    color: #fff;
+    height: 7vh;
+    width: 30vw;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#botao-adicionar:hover {
+    transform: scale(1.1);
+}
+
+#plataformas {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-family: Bruno ace, 'Times New Roman', 'Arial';
+}
+
+#text-plataforma, #text-genero {
+    margin-left: 10px;
+}
+
+#data-lancamento,#generos {
+    display: flex;
+    flex-direction: row;
+}
+
+#data-game {
+    margin-left: 10px;
 }

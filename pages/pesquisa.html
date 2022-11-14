@@ -8,57 +8,99 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/pesquisa.css">
+    <link rel="stylesheet" href="../style/compras.css">
+
+    <script src="../js/Compras-games.js" defer></script>
+    <script src="../js/Aside-api.js" defer></script>
+    <script src="../js/Pesquisa-api.js" defer></script>
 
 <body>
+
+     <!--Carrinho de compras modal-->
+
+     <div class="modal-compras">
+        <div class="header">
+            <div class="subtitulo">
+                <p>Carrinho de jogos</p>
+            </div>
+
+            <div class="botao-fundo">
+                <input type="button" value="X" onclick="Fechar_Modal_Carrinho()">
+            </div>
+        </div>
+
+        <div class="main">
+
+        </div>
+
+        <div class="footer">
+            <div class="button-left">
+                <label for="estado">Método de pagamento
+                    <select id="estado">
+                        <option value="deg">Débito</option>
+                        <option value="cred">Crédito</option>
+                        <option value="pix">Pix</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="button-right">
+                <p id="valor-total"> </p>
+                <input type="button" value="FINALIZAR COMPRA" id="botao-compra">
+            </div>
+        </div>
+    </div>
+    
     <header>
         <div id="site-titulo">
             <p>GameMaker</p>
         </div>
 
-        <div class="carrinho">
-            <input type="image" src="../imgs/carrinho de compras.png" onclick="AnimacaoCarrinho()" id="carrinho-image">
+        <div id="carrinho">
+            <input type="image" src="../imgs/carrinho de compras.png" onclick="Abrir_Modal_Carrinho()">
         </div>
     </header>
+
     <main>
-        <figure class="fig">
-            <div id="titulo">
-                <h2>FAR CRY 4</h2>
-            </div>
-            <div id="nota">
-                <h2>&#9733 &#9733 &#9733 &#9733 </h2>
-                <h5>ALTAMENTE RECOMENDADO</h5>
+        <figure>
+            <div class="titulo">
+                <p id="titulo-game"></p>
+
+                <div class="nota">
+                    <div id="stars">
+                        <p id="star-1">&#9733</p>
+                        <p id="star-2">&#9733</p>
+                        <p id="star-3">&#9733</p>
+                        <p id="star-4">&#9733</p>
+                        <p id="star-5">&#9733</p>
+                    </div> <!--Fazer dps-->
+                    <p id="avaliacao-text"></p>
+                </div>
             </div>
 
-            <div> <img src="https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg" alt=""
-                    id="game-img">
+            <div class="descricao">
+                <img src="" alt="Game image" id="imagem-game">
+                
+                <p id="data-lancamento"></p>
+
+                <div id="plataformas">
+                    <p>Plataformas disponiveís: </p>
+                </div>
+
+                <div id="generos">
+                    <p>Gêneros: </p>
+                </div>
             </div>
-            <div id="descricao">
-                <p>Jogo de ação e aventura de mundo aberto. super competitivo e etc. Jogo de ação e aventura de mundo aberto. super competitivo e etc. Jogo de ação e aventura de mundo aberto. super competitivo e etc.</p>
-            </div>
+
         </figure>
 
+        <aside>
+            <p id="preco"></p>
+            <p id="text">Compre já e divirta-se</p>
 
-
-        <div class="ComprejaDivirtase">
-            <h2 id="preco">R$ 159,99</h2>
-            <p id="title">Compre e divirta-se</p>
-
-
-            <input type="button" id="button1" value="compre agora" />
-            <input type="button" id="button2" value="Adicionar ao carrinho"/>
-
-        </div>
-
-
-
+            <input type="button" id="botao-adicionar" value="ADICIONAR AO CARRINHO" onclick="Adicionar_Jogos_Pesquisa()"/>
+        </aside>
     </main>
-
-<footer>
-
-</footer>
-
-
-
 </body>
 
 </html>

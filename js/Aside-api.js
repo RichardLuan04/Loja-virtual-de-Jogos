@@ -119,9 +119,22 @@ async function Generos(genero, name) {
         }
     }
     if (imagens_contagem < 15){
-        debugger
         Generos(genero, name)
     } else {
         imagens_contagem = 0
     }
+}
+
+// Função para ir para a tela de pesquisa
+function passaValor(valor) {
+    if (valor != ""){
+        window.location.href = "pesquisa.html?CampoPesquisa="+valor
+    } else {
+        alert ("Preencha o campo para poder pesquisar!")
+    }
+}
+
+function Tela_Pesquisa(){
+    let game = document.getElementById("CampoPesquisa").value
+    passaValor(game);
 }
