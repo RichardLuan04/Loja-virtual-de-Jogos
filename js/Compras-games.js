@@ -198,7 +198,7 @@ function Adicionar_Jogos_Pesquisa(){
 function Finalizar_Compras() {
     alert("Compra realizada com sucesso!")
     localStorage.removeItem(email_usuario)
-    window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/'
+    window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/pages/games.html'
 }
 
 function Salvando_Produtos(){
