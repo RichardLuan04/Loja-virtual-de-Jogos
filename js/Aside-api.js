@@ -4,6 +4,9 @@ const key = '190508eb6b3047539fa72bf5f3b765b6'
 // Quantidade de paginas = 99 (usando 31)
 // Numeros de jogos por pagina = 20
 
+// Chamando tela de jogos para ter algo para mostrar
+Games()
+
 // Pesquisando por jogos populares
 
 async function Mais_Populares() {
@@ -24,9 +27,6 @@ async function Mais_Populares() {
         text.innerText = bodyJson.results[i].name
     }
 }
-
-// Chamando tela de jogos para ter algo para mostrar
-//Games() // ATIVAR NO DIA DA APRESENTACAO
 
 // Pesquisando por jogos de todas as categorias
 

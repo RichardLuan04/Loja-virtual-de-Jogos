@@ -66,6 +66,7 @@ if (window.location.href != 'https://richardluan04.github.io/Loja-virtual-de-Jog
         document.getElementById("valor-total").innerText = total
     }
 }
+
 // Função para adicionar jogos ao carrinho
 
 function Adicionar_Jogos(number) {
@@ -189,6 +190,6 @@ function Adicionar_Jogos_Pesquisa(){
 
 function Finalizar_Compras() {
     alert("Compra realizada com sucesso!")
-    localStorage.removeItem(Encontra_Item())
-    window.location.href = 'index.html'
+    localStorage.removeItem(localStorage.key(0))
+    window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/'
 }
