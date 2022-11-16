@@ -1,19 +1,18 @@
-let infosUsuarios = {
-    email: "",
-    games: []
-}
-
+let usuario = {
+    email: ""
+} 
+ 
 async function fazerLogin() {
-
+   
     let email = document.getElementById("campoEmail").value
     const senha = document.getElementById("campoSenha").value
 
     const body = {
-        email: email,
+        email: email,         
         senha: senha
     }
 
-    let resposta = await fetch("https://codifica-demo-api.herokuapp.com/api/v1/users/login", {
+    var resposta = await fetch("https://codifica-demo-api.herokuapp.com/api/v1/users/login", {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
@@ -25,15 +24,20 @@ async function fazerLogin() {
 
     if (resposta.ok) {
         salvarInfos(body.email)
+        Salvando_Produtos(body.email)
         window.location.href = "pages/games.html"
     } else {
         alert(json.mensagem)
-    }
+    }   
 }
 
-function salvarInfos(email) {
-    infosUsuarios.email = email
-    let usuario_salvo = JSON.stringify(infosUsuarios)
+function salvarInfos(email){
+    usuario.email = email
+    let usuario_salvo = JSON.stringify(usuario)
     localStorage.setItem("usuario", usuario_salvo)
 }
 
+function Salvando_Produtos(user){
+    let comprasJson = JSON.stringify(compras)
+    localStorage.setItem(`${user}`, comprasJson)
+}
