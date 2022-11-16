@@ -156,6 +156,10 @@ hr {
     align-items: center;
 }
 
+.button-left {
+    padding: 15px;
+}
+
 .button-left label {
     display: flex;
     flex-direction: column;
