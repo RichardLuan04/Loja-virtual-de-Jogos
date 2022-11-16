@@ -9,7 +9,7 @@ function Fechar_Modal_Carrinho() {
 // LocalStorage do carrinho
 let total = 0
 total.toFixed(2)
-let compras = []
+var compras = []
 let compras_Salvas = localStorage.getItem("Compras")// Nome da chave ser o email do usuario
 
 if (compras_Salvas !== null) {
@@ -121,7 +121,7 @@ function Adicionar_Jogos(number) {
 
     compras.push(informacoes_compras)
 
-    let comprasJson = JSON.stringify(compras)
+    var comprasJson = JSON.stringify(compras)
     localStorage.setItem('Compras', comprasJson)
 }
 
@@ -181,11 +181,13 @@ function Adicionar_Jogos_Pesquisa() {
 
     compras.push(informacoes_compras)
 
-    let comprasJson = JSON.stringify(compras)
+    var comprasJson = JSON.stringify(compras)
     localStorage.setItem('Compras', comprasJson)
 }
 
 function finalizarcompra() {
-    localStorage.getItem("Compras")
+    alert("compra realizada com sucesso! sua página será reiniciada.")
+    localStorage.removeItem("Compras")
+    window.location.reload(true)
 
 }
