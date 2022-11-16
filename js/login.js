@@ -1,11 +1,10 @@
 let infosUsuarios = {
     email: "",
-    jogosComprados: [],
-    carrinho: []
+    games: []
 }
 
 async function fazerLogin() {
-    debugger
+
     let email = document.getElementById("campoEmail").value
     const senha = document.getElementById("campoSenha").value
 
@@ -37,9 +36,4 @@ function salvarInfos(email) {
     let usuario_salvo = JSON.stringify(infosUsuarios)
     localStorage.setItem("usuario", usuario_salvo)
 }
-
-
-
-
-
 
