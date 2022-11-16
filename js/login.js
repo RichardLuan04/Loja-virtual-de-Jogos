@@ -1,18 +1,18 @@
 let usuario = {
     email: ""
 } 
- 
+
 async function fazerLogin() {
    
     let email = document.getElementById("campoEmail").value
     const senha = document.getElementById("campoSenha").value
 
-    const body = {
+    var body = {
         email: email,         
         senha: senha
     }
 
-    var resposta = await fetch("https://codifica-demo-api.herokuapp.com/api/v1/users/login", {
+    let resposta = await fetch("https://codifica-demo-api.herokuapp.com/api/v1/users/login", {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
@@ -33,11 +33,15 @@ async function fazerLogin() {
 
 function salvarInfos(email){
     usuario.email = email
-    let usuario_salvo = JSON.stringify(usuario)
+    var usuario_salvo = JSON.stringify(usuario)
     localStorage.setItem("usuario", usuario_salvo)
 }
 
 function Salvando_Produtos(user){
     let comprasJson = JSON.stringify(compras)
     localStorage.setItem(`${user}`, comprasJson)
+}
+
+function Encontra_Item(email_user) {
+    return body.email
 }
