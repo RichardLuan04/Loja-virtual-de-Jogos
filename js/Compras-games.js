@@ -9,7 +9,14 @@ function Fechar_Modal_Carrinho() {
 let total = 0
 total.toFixed(2)
 let compras = [] 
-let compras_Salvas = localStorage.getItem(`${localStorage.key(0)}`)
+
+let email_usuario
+debugger
+if (localStorage.getItem('usuario') != undefined) {
+    email_usuario = localStorage.getItem('usuario')
+}
+
+let compras_Salvas = localStorage.getItem(email_usuario)
 
 if (window.location.href != 'https://richardluan04.github.io/Loja-virtual-de-Jogos/' ) { //Verificando se estou na pagina certa para mostrar o carrinho de compras, caso contrario nada acontece
 
@@ -125,7 +132,7 @@ function Adicionar_Jogos(number) {
 
     compras.push(informacoes_compras)
     
-    Salvando_Produtos(localStorage.key(0))
+    Salvando_Produtos()
 }
 
 function Adicionar_Jogos_Pesquisa(){
@@ -184,12 +191,17 @@ function Adicionar_Jogos_Pesquisa(){
 
     compras.push(informacoes_compras)
 
-    Salvando_Produtos(localStorage.key(0))
+    Salvando_Produtos()
 }
 
 
 function Finalizar_Compras() {
     alert("Compra realizada com sucesso!")
-    localStorage.removeItem(localStorage.key(0))
+    localStorage.removeItem(email_usuario)
     window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/'
+}
+
+function Salvando_Produtos(){
+    let comprasJson = JSON.stringify(compras)
+    localStorage.setItem(email_usuario, comprasJson)
 }

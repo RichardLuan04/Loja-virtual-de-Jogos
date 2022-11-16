@@ -32,12 +32,5 @@ async function fazerLogin() {
 }
 
 function salvarInfos(email){
-    usuario.email = email
-    let usuario_salvo = JSON.stringify(usuario)
-    localStorage.setItem("usuario", usuario_salvo)
-}
-
-function Salvando_Produtos(user){
-    let comprasJson = JSON.stringify(compras)
-    localStorage.setItem(`${user}`, comprasJson)
+    localStorage.setItem("usuario", email)
 }
