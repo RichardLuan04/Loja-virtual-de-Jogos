@@ -7,11 +7,9 @@ function Fechar_Modal_Carrinho() {
 }
 
 let total = 0
-total.toFixed(2)
 let compras = [] 
 
 let email_usuario
-debugger
 if (localStorage.getItem('usuario') != undefined) {
     email_usuario = localStorage.getItem('usuario')
 }
@@ -70,7 +68,7 @@ if (window.location.href != 'https://richardluan04.github.io/Loja-virtual-de-Jog
             let valor = parseFloat(game.valor)
             total = total + valor
         }
-        document.getElementById("valor-total").innerText = total
+        document.getElementById("valor-total").innerText = `Total: R$ ${total.toFixed(2)}`
     }
 }
 
@@ -120,9 +118,10 @@ function Adicionar_Jogos(number) {
 
     let hr = document.createElement("hr")
     div_compra.append(hr)
-    
+
     let preco = parseFloat(p_preco.textContent)
-    document.getElementById("valor-total").innerText = total = total + preco
+    total = total + preco
+    document.getElementById("valor-total").innerText = `Total: R$ ${total.toFixed(2)}`
 
     let informacoes_compras = {
         imagem: img.src,
@@ -181,7 +180,8 @@ function Adicionar_Jogos_Pesquisa(){
     div_compra.append(hr)
     
     let preco = parseFloat(p_preco.textContent)
-    document.getElementById("valor-total").innerText = total = total + preco
+    total = total + preco
+    document.getElementById("valor-total").innerText = `Total: R$ ${total.toFixed(2)}`
 
     let informacoes_compras = {
         imagem: img.src,
@@ -198,7 +198,7 @@ function Adicionar_Jogos_Pesquisa(){
 function Finalizar_Compras() {
     alert("Compra realizada com sucesso!")
     localStorage.removeItem(email_usuario)
-    window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/'
+    window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/pages/games.html'
 }
 
 function Salvando_Produtos(){

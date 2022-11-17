@@ -21,13 +21,14 @@ let jogo_nome = ConsultaTexto("CampoPesquisa");
 
 async function Mostrar_Dados() {
     
-    const key = '190508eb6b3047539fa72bf5f3b765b6'
+    const key = '4e727642df2b47278a55ff978b4642be'
 
     let endpoint = `https://api.rawg.io/api/games?search=${jogo_nome}&key=${key}`
     let response = await fetch(endpoint)
     let bodyJson = await response.json()
 
     document.getElementById("titulo-game").innerText = bodyJson.results[0].name
+    document.getElementById("imagem-secundaria").src = bodyJson.results[0].short_screenshots[parseInt(Math.random() * 6)].image //Obtendo var do screenshots do jogo
     document.getElementById("imagem-game").src = bodyJson.results[0].background_image
     document.getElementById("data-lancamento").innerText = 'Lançamento: ' + bodyJson.results[0].released
 

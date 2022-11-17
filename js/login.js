@@ -24,7 +24,6 @@ async function fazerLogin() {
 
     if (resposta.ok) {
         salvarInfos(body.email)
-        Salvando_Produtos(body.email)
         window.location.href = "pages/games.html"
     } else {
         alert(json.mensagem)
@@ -33,4 +32,8 @@ async function fazerLogin() {
 
 function salvarInfos(email){
     localStorage.setItem("usuario", email)
+}
+
+function Voltar_Login() {
+    window.location.href = 'https://richardluan04.github.io/Loja-virtual-de-Jogos/'
 }

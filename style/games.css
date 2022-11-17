@@ -47,7 +47,7 @@ header {
 }
 
 .pesquisar {
-    width: 60%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: start;
@@ -56,7 +56,7 @@ header {
 }
 
 #CampoPesquisa {
-    width: 60%;
+    width: 90%;
     height: 30%;
     border: solid 4px;
     background: none;
@@ -89,6 +89,20 @@ header {
     height: 12vh;
     filter: invert(100%);
     transform: scaleX(-1);
+}
+
+.voltar-login {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar-login input {
+    height: 12vh;
+    filter: invert(100%);
 }
 
 /* Estilizando o main */

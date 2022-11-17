@@ -1,5 +1,5 @@
 // API = https://api.rawg.io/api/games?search=NOMEDOJOGO&key=7787766744a34328ba34b4df7a3947f0&
-const key = '190508eb6b3047539fa72bf5f3b765b6'
+const key = '4e727642df2b47278a55ff978b4642be'
 // Sorteando jogos populares pelas paginas do endpoint
 // Quantidade de paginas = 99 (usando 31)
 // Numeros de jogos por pagina = 20
@@ -54,7 +54,7 @@ async function Games() {
 let imagens_contagem = 0
 
 async function Plataformas(plataforma) {
-    
+    debugger
     document.getElementById("titulo-atual").innerText = plataforma
     let random_page = parseInt(Math.random() * 100 + 1)
     let endpoint = `https://api.rawg.io/api/games?key=${key}&page=${random_page}`
@@ -91,7 +91,7 @@ async function Plataformas(plataforma) {
 // Pesquisando por jogos de diferentes generos
 
 async function Generos(genero, name) {
-    
+    debugger
     document.getElementById("titulo-atual").innerText = name
     let random_page = parseInt(Math.random() * 100 + 1)
     let endpoint = `https://api.rawg.io/api/games?key=${key}&page=${random_page}`

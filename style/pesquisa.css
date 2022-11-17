@@ -115,17 +115,35 @@ figure {
     flex-direction: column;
 }
 
-.descricao img {
+.imagens {
+    position: relative;
+}
+
+#imagem-game {
     height: 45vh;
     width: 45vw;
     border-radius: 10px;
     object-position: center;
     object-fit: cover;
-    transition: 0.4s;
+    position: relative;
 }
 
-#imagem-game:hover{
-    transform: scale(1.1);
+#imagem-secundaria {
+    height: 45vh;
+    width: 45vw;
+    border-radius: 10px;
+    object-position: center;
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.imagens:hover #imagem-secundaria{
+    visibility: visible;
+    opacity: 1;
 }
 
 .descricao p {
